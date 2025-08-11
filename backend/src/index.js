@@ -70,6 +70,7 @@ app.get('/api/health', (req, res) => {
 // Error handling middleware
 app.use(notFound);
 app.use(errorHandler);
+app.set("trust proxy", 1);
 
 // Database connection
 const connectDB = async () => {
