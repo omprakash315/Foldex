@@ -56,6 +56,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running");
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
@@ -98,6 +102,9 @@ process.on('unhandledRejection', (err) => {
   console.log('Unhandled Rejection:', err);
   process.exit(1);
 });
+
+app.use(notFound);
+app.use(errorHandler);
 
 // Start the server
 startServer();
