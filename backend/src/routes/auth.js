@@ -8,10 +8,10 @@ const router = express.Router();
 router.get('/google', passport.authenticate('google', { scope: ['openid', 'profile', 'email'] }));
 
 router.get('/google/callback', 
-  passport.authenticate('google', { failureRedirect: 'http://localhost:8080/login' }),
+  passport.authenticate('google', { failureRedirect: 'https://foldex-git-main-om-prakash-jats-projects.vercel.app/' }),
   (req, res) => {
     // Successful authentication
-    res.redirect('http://localhost:8080/dashboard');
+    res.redirect('https://foldex-git-main-om-prakash-jats-projects.vercel.app/dashboard');
   }
 );
 
@@ -19,10 +19,10 @@ router.get('/google/callback',
 router.get('/linkedin', passport.authenticate('linkedin-openidconnect'));
 
 router.get('/linkedin/callback',
-  passport.authenticate('linkedin-openidconnect', { failureRedirect: 'http://localhost:8080' }),
+  passport.authenticate('linkedin-openidconnect', { failureRedirect: 'https://foldex-git-main-om-prakash-jats-projects.vercel.app/' }),
   (req, res) => {
     // Successful authentication
-    res.redirect('http://localhost:8080/dashboard');
+    res.redirect('https://foldex-git-main-om-prakash-jats-projects.vercel.app/dashboard');
   }
 );
 
