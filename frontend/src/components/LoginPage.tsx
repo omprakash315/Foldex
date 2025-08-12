@@ -12,12 +12,12 @@ const LoginPage = ({ onLogin }: LoginPageProps) => {
 
   const handleGoogleLogin = () => {
     setIsLoading(true);
-    window.location.href = 'https://foldex-backend.onrender.com/api/auth/google';
+    window.location.href = '/api/auth/google';
   };
 
   const handleLinkedInLogin = () => {
     setIsLoading(true);
-    window.location.href = 'https://foldex-backend.onrender.com/api/auth/linkedin';
+    window.location.href = '/api/auth/linkedin';
   };
 
   return (
