@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      '/api': 'https://foldex-backend.onrender.com'
+    }
   },
   plugins: [
     react(),
